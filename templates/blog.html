@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class = "art">
+        {% if art %}
+    <div class = "art-title"><a href ="http://localhost:14080/blog/{{art.key().id()}}">{{art.title}}</a></div>
+        <pre class = "art-body">{{art.art}}</pre>
+            {% endif %}
+
+
+        {% if error %}
+        <h2 class = "error">{{error}}<h2>
+            {% endif %}
+
+    </div>
+
+{% endblock %}
